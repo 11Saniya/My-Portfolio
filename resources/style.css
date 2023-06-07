@@ -102,12 +102,12 @@ h1 {
     margin-top: 10px;
 }
 
-#projects h1 {
+ /*#projcets h1 {
     margin-bottom: 50px;
     margin-top: 5px;
     text-align: center;
     margin-left: 5px;
-}
+} */
 
 #projects div p {
     text-align: center;
@@ -148,8 +148,8 @@ h1 {
     padding-top: 30px;
 }
 
-#skills h1 {
-    margin-left: 45%;
+ h1 {
+    margin-left: 43%;
     margin-bottom: 40px;
     margin-top: 5px;
     padding-top: 10px;
