@@ -1,12 +1,13 @@
 * {
     padding: 0;
     margin: 0;
+    background-color: #000;
 }
 
 nav {
     height: 80px;
     width: 100%;
-    background: rgb(22, 59, 72);
+    background: #000;
     position: fixed;
 
 }
@@ -31,6 +32,9 @@ nav li {
     line-height: 80px;
     text-decoration: none;
 }
+nav li a:hover {
+    background-color: rgb(169, 21, 21);
+}
 
 nav a {
     color: #fff;
@@ -43,42 +47,77 @@ nav a {
 }
 
 nav button {
-    background-color: rgb(28, 4, 12);
+    background-color: rgb(18, 26, 33);
 }
 
 a.active,
 a:hover {
     border: 1px solid rgb(215, 189, 189);
     transition: .5s;
+    background-color: rgb(189, 141, 141);
 }
 
 h1 {
-    margin-left: 40%;
-}
-
-#about {
-    background-color: rgb(222, 165, 95);
-    box-sizing: border-box;
-    width: 100%;
-    height: fit-content;
-    padding: 20px 10% 20px 5%;
     margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+    margin-left: 40%;
+    color: #fff;
 }
-
 #about img {
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    margin-top: 40px;
-    margin-right: 10%;
+    width: 35%;
+    height: 90%;
+    margin: 30px 30px;
+    margin-left: 60%;
+    border-radius: 5px solid black;
+    padding: 5px 5px;
 }
 
-#about p {
+#about{
+    background: #141c3a;
+    margin: 0;
+    display: block; 
+    float: left;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 20px;
+  }
+
+  #btn {
+    margin-top: 28%;
+    margin-left: 12%;
+    width: 140px;
+    height: 45px;
+    background-color:rgb(40, 250, 149);
+    border-radius: 40px;
+    border: #141c3a;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  #btn:hover{
+    transform: translateX(0.5s);
+  }
+  #btn a {
+    color: black;
+    background-color: rgb(40, 250, 149);
+    border: none;
+  }
+  #info {
+    display: block;
+    margin: 0 auto;
+    width: 560px;
+    height: 120px;
+    padding: 20px;
+    font-size: 20px;
     text-align: center;
+    background-color: #141c3a;
+    color: white;
+    margin-top: -95vh;
+    margin-left: 5%;
     line-height: 40px;
-    text-transform: uppercase;
+    font-weight: 18px;
+  }
+#info span {
+    font-size: 20px;
+    background-color: #141c3a;
 }
 
 .heading {
@@ -89,25 +128,27 @@ h1 {
 
 #projects {
     box-sizing: border-box;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: rgb(122, 191, 193);
+    width: 98%;
+    height: 30%;
     margin-bottom: 25px;
+    border: 2px solid #fff;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px 10px;
 }
 
-#projects button {
-    margin-left: 20px;
+/* #projects button {
+    height: 40px;
+    margin-left: 50px;
     margin-top: 10px;
+    transition: background 0.5s, transform 0.5s;
+    background-color: black;
+    border: none;
+    color: blueviolet;
+    border-radius: 5px;
+    
 }
 
- /*#projcets h1 {
-    margin-bottom: 50px;
-    margin-top: 5px;
-    text-align: center;
-    margin-left: 5px;
-} */
 
 #projects div p {
     text-align: center;
@@ -116,7 +157,7 @@ h1 {
 }
 
 #projects div {
-    border: 1px solid rgb(12, 11, 11);
+    border: 2px solid rgb(244, 238, 238);
     width: 40%;
     height: 40vh;
     margin: 40px 40px 40px 10%;
@@ -137,12 +178,96 @@ h1 {
 #projects h3 {
     text-decoration: underline;
     margin: 0 40px;
+} */
+
+#imgs{
+    background-color: black; 
+    color: red;
+    margin-top: 2px;
+    border: 1px solid #fff;
 }
+#resto {
+    height: 40vh;
+    margin-bottom: 20px;
+}
+.portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 3.5rem;
+    margin-top: 5rem;
+}
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: -70px;
+    
+}
+.row img {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    transition: transform 0.5s;
+    height: 20%;
+    border: 1px solid #fff;
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(136, 92, 72, 0.714),#00a6ff);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+    margin-bottom: 5px;
+}
+.layer h5 {
+    font: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    background-color: light rgb(167, 224, 241);
+}
+.layer p {
+    color: var(--second-color);
+    font-size:20px;
+    margin-top: 20px;
+    background: var(--text-color);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 50px; */
+    padding-top: 30px;
+}
+.row:hover img {
+    transform: scale(1.1);
+}
+.row:hover .layer{
+    height: 100%;
+}
+
+.content {
+    background: var(--second-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
 
 #skills {
     padding-left: 40px;
     padding-right: 40px;
-    background-color: rgb(77, 115, 115);
+    background-color: rgb(128, 148, 148);
     margin-bottom: 40px;
     cursor: pointer;
     padding-top: 30px;
@@ -156,40 +281,75 @@ h1 {
 }
 
 #skills img {
-    width: 100px;
+    width: 150px;
     height: 100px;
-    margin-right: 40px;
+    margin-right: 50px;
     margin-bottom: 20px;
-    border-radius: 40px;
-    margin-left: 55px;
+    border-radius: 10px;
+    margin-left: 24%;
+    transition:  transform 0.5s;
+}
+
+#skills img:hover {
+    transform: translate(8px);
+    cursor: pointer;
+}
+
+.light-up {
+    text-shadow: 0 0 0.4rem #000;
+}
+.clr-html {
+    color: grey;
 }
 
 #contact {
-    background-color: rgb(202, 112, 201);
-    margin-top: 10px;
+    height: 25vh;
+    width: 100%;
+    background-color: rgb(226, 236, 43);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cont {
+    margin: 20px 10%;
+    height: 45px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: rgb(226, 236, 43);
+}
+.cont li {
+    list-style: none;
+    background-color: rgb(226, 236, 43);
+}
+.cont li a {
+    color: rgb(76, 76, 155);
+    background-color: rgb(226, 236, 43);
+}
+.cont img {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(226, 236, 43);
+    border-bottom: yellow;
 }
 
-#contact h1 {
-    margin-left: 45%;
-    margin-bottom: 20px;
-   
+#icon {
+    width: 60px;
+    height: 60px;
 }
-
-#contact button {
-    width: 15%;
-    height: 30%;
-    margin-left: 22%;
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    margin-top: 15px;
+#copy {
+    margin: 40px 10px;
+    margin-left: 80%;
+    font-weight: 300;
+    color: white;
 }
 
 @media (max-width: 450px) {
     nav ul {
-        position: fixed;
+        /* position: fixed; */
         width: 100%;
-        height: 60vh;
-        background-color: navy;
+        height: 80vh;
+        /* background-color: rgb(37, 37, 113); */
         top: 80px;
         left: -1005;
         text-align: center;
@@ -211,39 +371,69 @@ h1 {
         border: none;
         color: rgb(172, 44, 44);
     }
+h1 {
+    margin-top: 10px;
+    margin-left: 10%;
+    color: #fff;
+}
 
     #about {
-        width: 100%;
-        margin-left: 30%;
-        margin-right: 20px;
-        margin-top: 130%;
+        width: 100vh;
+        /* margin-left: 30%; */
+        /* margin-right: 20px; */
+        margin-top: 140%;
+    }
+    #about p {
+      display: inline;
+    }
+    #about img {
+        height: 25%;
     }
     #projects {
-        width: 100%;
+        width: 50vh;
         margin-left: 5px;
-        margin-right: 10px;
-      height: 60%;
+        margin-right: 40px;
+      /* height: 100vh; */
       background-color: white;
+    padding-left: 30px;
+    margin-left: 40%;
+    background-color: black;
+    border: none;
     }
     #projects img {
-        width: 40px;
-        height: 40px;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
     }
-    
+    .portfolio-content {
+        width: 40%;
+        height: 40%;
+    }
     #projects button {
         margin-right: 130px;
-        width: 130px;
+        width: 150px;
         text-align: center;
+        height: 30%;
     }
     #skills {
-        background-color: #fff;
-       margin-left: 40%;
+        background-color: #050505;
+       margin-left: 30%;
+       padding-left: 20px;
     }
     #contact {
-        background-color: white;
-        margin-left: 30%;
+        background-color: rgb(12, 10, 10);
+        margin-left: 45%;
     }
-    #contact button {
-        width: 200px;
+    #contact img {
+        width: 100px;
+        padding: 0px;
+        background-color: black;
+        
+    }
+    #contact li a {
+        background-color: #000;
+    }
+    #copy {
+        width: 100%;
     }
 }
